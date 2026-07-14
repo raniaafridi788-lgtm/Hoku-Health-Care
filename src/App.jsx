@@ -1,12 +1,15 @@
-import Navbar from "./HomePage/Navbar"
+import React from "react";
+import Dashboard from "./AdminPanel/Dashboard";
+import Navbar from "./HomePage/Navbar";
+import "./index.css";
 
 function App() {
-
-  return (
-    <>
-    <Navbar/>
-    </>
+  return(
+  <>
+  <Dashboard />;
+  <Navbar/>
+  </>
   )
 }
 
-export default App
+export default App;
