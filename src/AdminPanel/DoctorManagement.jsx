@@ -2,13 +2,13 @@ import React, { useMemo, useState } from "react";
 import { Search, Plus, Star, Mail, Phone, X, Stethoscope, Pencil, Trash2 } from "lucide-react";
 
 const initialDoctors = [
-  { id: 1, name: "Dr. Bilal Ahmed", specialty: "Cardiology", email: "bilal.ahmed@hoku.com", phone: "+92 300 1234567", rating: 4.9, patients: 312, status: "Active" },
-  { id: 2, name: "Dr. Sana Malik", specialty: "Dermatology", email: "sana.malik@hoku.com", phone: "+92 301 2345678", rating: 4.7, patients: 208, status: "Active" },
-  { id: 3, name: "Dr. Imran Shah", specialty: "Pediatrics", email: "imran.shah@hoku.com", phone: "+92 302 3456789", rating: 4.8, patients: 265, status: "On Leave" },
-  { id: 4, name: "Dr. Hina Raza", specialty: "Orthopedics", email: "hina.raza@hoku.com", phone: "+92 303 4567890", rating: 4.6, patients: 190, status: "Active" },
+  { id: 1, name: "Dr. Bilal Ahmed", specialty: "Child Specialist", email: "bilal.ahmed@hoku.com", phone: "+92 300 1234567", rating: 4.9, patients: 312, status: "Active" },
+  { id: 2, name: "Dr. Sana Malik", specialty: "Gynecologist", email: "sana.malik@hoku.com", phone: "+92 301 2345678", rating: 4.7, patients: 208, status: "Active" },
+  { id: 3, name: "Dr. Imran Shah", specialty: "Dental Specialist", email: "imran.shah@hoku.com", phone: "+92 302 3456789", rating: 4.8, patients: 265, status: "On Leave" },
+  { id: 4, name: "Dr. Hina Raza", specialty: "Dermatologist", email: "hina.raza@hoku.com", phone: "+92 303 4567890", rating: 4.6, patients: 190, status: "Active" },
 ];
 
-const specialties = ["All", "Cardiology", "Dermatology", "Pediatrics", "Orthopedics"];
+const specialties = ["All", "Child Specialist", "Gynecologist", "Dental Specialist", "Dermatologist"];
 
 export default function DoctorManagement() {
   const [doctors, setDoctors] = useState(initialDoctors);
@@ -83,7 +83,7 @@ export default function DoctorManagement() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search doctors..."
-            className="w-full rounded-xl border-slate-200 bg-white py-2.5 pl-9 pr-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full rounded-xl border border-slate-700 bg-slate-800 text-white placeholder:text-slate-400 py-2.5 pl-9 pr-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         <div className="flex flex-wrap gap-2">
