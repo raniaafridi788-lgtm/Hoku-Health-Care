@@ -1,13 +1,17 @@
-import React from "react";
-import Dashboard from "./AdminPanel/Dashboard";
 import Navbar from "./HomePage/Navbar";
-import "./index.css";
+import Hero from "./HomePage/Hero";
+import AboutPreview from "./HomePage/AboutPreview";
+import Services from "./HomePage/Services";
+
 
 function App() {
   return(
   <>
-  <Dashboard />;
+ 
   <Navbar/>
+  <Hero/>
+  <AboutPreview/>
+  <Services/>
   </>
   )
 }

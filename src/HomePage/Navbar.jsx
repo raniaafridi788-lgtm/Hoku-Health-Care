@@ -4,14 +4,14 @@ import React from "react";
   return (
     <header>
       {/* Top contact strip */}
-      <div className="hidden md:flex justify-end items-center gap-3 px-8 py-2 text-xs">
-        <span className="bg-[#1B4F8C] text-white px-4 py-2 rounded flex items-center gap-1">
+      <div className="hidden md:flex justify-end items-center gap-0 px-8 py-2 text-xs">
+        <span className="bg-[#1B4F8C] text-white px-4 py-2 rounded-bl-lg flex items-center gap-1">
           📞 512-258-789
         </span>
-        <span className="bg-[#8DC63F] text-white px-4 py-2 rounded flex items-center gap-1">
+        <span className="bg-[#8DC63F] text-white px-4 py-2  flex items-center gap-1">
           ✉ www.hoku-health.com
         </span>
-        <span className="bg-[#1B4F8C] text-white px-4 py-2 rounded flex items-center gap-1">
+        <span className="bg-[#1B4F8C] text-white px-4 py-2 flex items-center gap-1">
           📍 7537 Wiza Valley, Missouri
         </span>
       </div>
