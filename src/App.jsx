@@ -1,20 +1,13 @@
-
-import Navbar from "./HomePage/Navbar";
-import Hero from "./HomePage/Hero";
-import AboutPreview from "./HomePage/AboutPreview";
-import Services from "./HomePage/Services";
-
+import React from "react";
+// Agar aapne HeroSection ko 'src/components/FullDesign/' ke andar rakha hai:
+import HeroSection from "./Components/HeroSection";
 
 function App() {
-  return(
-  <>
- 
-  <Navbar/>
-  <Hero/>
-  <AboutPreview/>
-  <Services/>
-  </>
-  )
+  return (
+    <div className="min-h-screen bg-white">
+      <HeroSection />
+    </div>
+  );
 }
 
 export default App;
