@@ -1,11 +1,12 @@
 import React from "react";
-// Agar aapne HeroSection ko 'src/components/FullDesign/' ke andar rakha hai:
 import HeroSection from "./Components/HeroSection";
+import AboutSection from "./Components/AboutSection"; // Yeh line add karein
 
 function App() {
   return (
     <div className="min-h-screen bg-white">
       <HeroSection />
+      <AboutSection /> {/* Yeh line add karein */}
     </div>
   );
 }

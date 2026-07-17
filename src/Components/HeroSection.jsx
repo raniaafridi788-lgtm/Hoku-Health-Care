@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const HeroSection = () => {
+  // Agar aapko state use karni hai to yahan aise define karein:
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section className="relative bg-white pt-6 pb-16 px-6 md:px-16 lg:px-24">
-      {/* 1. Top Contact Info Bar (As shown in the image) */}
+      {/* 1. Top Contact Info Bar */}
       <div className="hidden md:flex justify-end gap-6 text-xs text-white bg-[#1565C0] py-3 px-6 rounded-full mb-10 max-w-max ml-auto shadow-md font-sans">
         <span className="flex items-center gap-1">📞 512-258-7119</span>
         <span className="flex items-center gap-1">📧 WWW.HOKUHEALTH.COM</span>
@@ -46,21 +49,26 @@ const HeroSection = () => {
           </div>
 
           {/* CTA Button */}
-          <button className="bg-[#1565C0] hover:bg-[#0d47a1] text-white font-bold py-4 px-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 tracking-wider text-sm">
+          <button 
+            onClick={() => setIsOpen(!isOpen)} 
+            className="bg-[#1565C0] hover:bg-[#0d47a1] text-white font-bold py-4 px-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 tracking-wider text-sm"
+          >
             GET STARTED
           </button>
+          
+          {/* Agar button click ho to ye text dikhe (Sirf state check karne ke liye) */}
+          {isOpen && <p className="text-green-600 mt-2">State is working fine!</p>}
         </div>
 
-        {/* 3. Right Column: Doctor Image (Exactly as shown in reference) */}
+        {/* 3. Right Column: Doctor Image */}
         <div className="relative flex justify-center">
           <div className="w-full max-w-lg aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-gray-50 relative group">
-            {/* Online medical-themed image of elder doctor and younger nurse */}
             <img 
               src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" 
               alt="Hoku Healthcare Doctor and Patient" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               onError={(e) => {
-                e.target.src = "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80";
+                e.currentTarget.src = "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80";
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
