@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Navbar from "./HomePage/Navbar"
 import Hero from "./HomePage/Hero"
 import AboutPreview from "./HomePage/AboutPreview"
@@ -38,6 +39,19 @@ function App() {
       </Routes>
     </> 
   )
+=======
+import React from "react";
+import HeroSection from "./Components/HeroSection";
+import AboutSection from "./Components/AboutSection"; // Yeh line add karein
+
+function App() {
+  return (
+    <div className="min-h-screen bg-white">
+      <HeroSection />
+      <AboutSection /> {/* Yeh line add karein */}
+    </div>
+  );
+>>>>>>> e1e732d9e61f82dee304f4a0d5fec6547ae8f067
 }
 
 export default App
