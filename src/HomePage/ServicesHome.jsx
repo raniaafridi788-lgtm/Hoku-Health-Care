@@ -10,7 +10,7 @@ const services = [
   { name: "Hospice Care", image: image3 },
 ];
 
- function Services({ items = services }) {
+ function ServicesHome({ items = services }) {
   return (
     <section id="services" className="px-6 md:px-12 py-16 text-center bg-gray-50">
       <p className="text-[#8DC63F] font-semibold text-sm tracking-widest mb-1">HOKU</p>
@@ -32,4 +32,4 @@ const services = [
     </section>
   );
 }
-export default Services
+export default ServicesHome

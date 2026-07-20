@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
  function Navbar() {
   return (
@@ -23,13 +24,12 @@ import React from "react";
           <span className="text-[#1B4F8C]">HEALTH CARE</span>
         </div>
         <div className="hidden lg:flex gap-8 text-sm font-semibold uppercase tracking-wide">
-
-          <span className="text-blue-500 ">Home</span>
+<          Link to="/">Home</Link>
           <span className="hover:text-blue-700">About</span>
-          <span className="hover:text-blue-700">Service</span>
+          <Link to="/services">Services</Link>
           <span className="hover:text-blue-700">Available</span>
           <span className="hover:text-blue-700">Reviews</span>
-          <span className="hover:text-blue-700">Contact Us</span>
+         <Link to="/contact">Contact Us</Link>
     
         </div>
         <button className="bg-[#1B4F8C] text-white px-7 py-3 rounded font-semibold text-xs tracking-wide hover:bg-[#163f70]">
